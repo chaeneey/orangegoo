@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="menu.css">
+    <title>Today's Orange</title>
+
+    <style>
+        body {
+            background-color: white;
+            width: 390px;
+            margin: 0px auto;
+            
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .top {
+            height: 80px;
+            background-color: white;
+
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 20px 0px 20px;
+            align-items:last baseline;
+            padding-bottom: 20px;
+        }
+
+
+
+
+        .content {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mainOrange {
+            width: 100%;
+        }
+
+        .mainText {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 13px;
+            
+            position: absolute;
+            top: 38%;
+        }
+
+        .contentTextGroup {
+            width: 390px;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            font-size: 10px;
+
+            background-color: white;
+            border-radius: 10px 10px 0px 0px;
+            position: absolute;
+            top: 100%;
+        }
+
+
+        #contentText1 {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            margin: 50px 0px 50px 30px;
+            font-weight: 800;
+
+            opacity: 0;
+            transition: opacity 3s ease;
+        }
+
+        #contentText2 {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            text-align: end;
+            margin: 50px 30px 50px 0px;
+            font-weight: 800;
+
+            opacity: 0;
+            transition: opacity 3s ease;
+        }
+
+        #contentText3 {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            margin: 50px 0px 50px 30px;
+            font-weight: 800;
+
+            opacity: 0;
+            transition: opacity 3s ease;
+        }
+
+        .contentImg {
+            width: 100%;
+            position: relative;
+            top: 600px;
+        }
+
+        .contentText4 {
+            position: absolute;
+            width: 390px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .content4-1 {
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            font-weight: bold;
+
+            position: relative;
+            top: 100px;
+        }
+
+        .content4-2 {
+            display: flex;
+            justify-content: space-around;
+            color: white;
+            background-color:  rgba(255, 255, 255, 0.5);
+            width: 80%;
+            border-radius: 5px;
+
+            position: relative;
+            top: 120px;
+        }
+
+        .content4-3 {
+            color: white;
+            font-size: 13px;
+
+            position: relative;
+            top: 400px;
+
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="top">
+            <button id="gobackBtn">
+                <img src="./orange/before.png">
+            </button>
+
+            <img src="./orange/logo.png">
+
+            <button id="menuBtn">
+                <img src="./orange/menu.png">
+            </button>
+            
+            <div class="menu" id="menu">
+                <button id="x-btn">
+                    <img src="./orange/x.png">
+                </button>
+                <div class="menu-content">
+                    <a href="main.html" style="color: black; text-decoration: none; font-weight: bold;">홈</a>
+                    <hr id="line"></hr>
+                    <a href="category.html" style="color: black; text-decoration: none; font-weight: bold;">상품 구매</a>
+                    <hr id="line"></hr>
+                    <a href="magazine.html" style="color: black; text-decoration: none; font-weight: bold;">매거진</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <img src="orange/orangeGra.png" class="mainOrange">
+            <div class="mainText">
+                <p style="color: #FFBF5C; font-size: 19px; font-weight: bold;">[TEAM. 오늘의 오렌지]</p>
+                <p style="color: white;">오렌, 지구는 [팀 오늘의 오렌지]가 만든<br>
+                친환경 제품 큐레이션 서비스입니다.</p>
+                <p style="color: white;">'오렌지'의 상큼한 향기는 청결과 정화를 연상시키며,<br>
+                이러한 특성으로 '청결한 환경'을 나타내는 의미로<br>
+                활용되기도 합니다.</p>
+                <p style="color: white;">따라서 서비스명 [오렌, 지구]는<br>
+                환경을 정화시켜줄 수 있는 제품들을 소개하여,<br>
+                우리가 오래 머물 수 있는 지구를 만들고자 하는<br>
+                의미를 가지고 있습니다.</p>
+            </div>
+
+            <div class="contentTextGroup">
+                <div class="contentText" id="contentText1">
+                    <p style="font-size: 15px; font-weight: bold;">[우리의 노력이 <span style="color: #FFBF5C;">당신에게 편리함을</span>]</p>
+                    <p>'오렌, 지구'는 여러 부류의 친환경 제품 정보를 제공합니다.<br>
+                        우리 모두 환경을 생각하는 마음은 같은데,<br>
+                        환경을 위한 제품의 정보를 하나 하나 찾아보는 것은 쉽지 않습니다.<br>
+                        우리의 노력이 당신의 수고를 덜어드릴 수 있길 바랍니다.</p>
+                </div>
+
+                <div class="contentText" id="contentText2">
+                    <p style="font-size: 15px; font-weight: bold;">[줏대있는 <span style="color: #FFBF5C;">친환경'기준'</span>]</p>
+                    <p>친환경의 기준은 참 애매합니다.<br>
+                        내용물만 친환경이면 되는지, 용기까지 친환경이어야 하는지.<br>
+                        어떤 기준으로 친환경 제품을 구매하는 것이 좋을지 고민되기 마련입니다.<br>
+                        우리는 명확하게 통일된 기준을 바탕으로 친환경 제품을 큐레이션합니다.</p>
+                </div>
+
+                <div class="contentText" id="contentText3">
+                    <p style="font-size: 15px; font-weight: bold;">[더 오래 머물 수 있는 <span style="color: #FFBF5C;">지구를 위해</span>]</p>
+                    <p>'오렌, 지구'는 친환경 제품'만' 큐레이션 하는 서비스가 아닙니다.<br>
+                        환경에 대한 다양한 정보를 제공하는 매거진을 통해<br>
+                        더 오래 머물 수 있는 지구를 위한 이야기를 전합니다.<br></p>
+                </div>
+            </div>
+
+            <div>
+                <img src="orange/forestGra.png" class="contentImg">
+                <div class="contentText4">
+                    <div class="content4-1">
+                        <p>'오늘의 오렌지'와 함께<br>
+                            모두가 '오렌, 지구'를<br>
+                            외치는 날이 오길 소망하며.</p>
+                    </div>
+                    <div class="content4-2">
+                        <p>친환경 제품 둘러보기</p>
+                        <button style="border: none; background-color: transparent;" onclick="gotoCategory()">
+                            <img src="orange/maintocategory.png">
+                        </button>
+                    </div>
+                    <div class="content4-3">
+                        <p> TEAM. 오늘의 오렌지 | 김정연 김예진 박채연 손지유 장수연</p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+
+    <script src="menu.js"></script>
+    <script>
+        function gotoCategory() {
+            window.location.href = "category.html";
+        }
+
+        const slideTextOne = document.getElementById("contentText1");
+        const slideTextTwo = document.getElementById("contentText2");
+        const slideTextThr = document.getElementById("contentText3");
+
+        window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                const elementPosition = slideTextOne.offsetTop;
+                const windowHeight = window.innerHeight;
+
+                function changeOpacity(element, opacity) {
+                    element.style.opacity = opacity;
+                }
+
+                if (scrollPosition > elementPosition - windowHeight / 2) {
+                
+                setTimeout(function() {
+                    changeOpacity(slideTextOne, 1);
+                }, 0); 
+
+                setTimeout(function() {
+                    changeOpacity(slideTextTwo, 1);
+                }, 1000); 
+
+                setTimeout(function() {
+                    changeOpacity(slideTextThr, 1);
+                }, 2000); 
+
+
+                }
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>

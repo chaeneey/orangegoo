@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="menu.css">
+    <title>Magezine</title>
+
+    <style>
+        body {
+            background-color: white;
+            width: 390px;
+            margin: 0px auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .top {
+            height: 80px;
+            background-color: white;
+
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 20px 0px 20px;
+            align-items:last baseline;
+            padding-bottom: 20px;
+        }
+
+        .content {
+            scroll-behavior: auto;
+            display: flex;
+
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gotomaga-btn {
+            background-color: transparent;
+            border: none;
+            border-radius: 10px;
+            padding: 5px 10px 5px 10px;
+            color: black;
+            margin-bottom: 30px;
+
+            display: flex;
+            justify-content: end;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="top">
+            <button id="gobackBtn">
+                <img src="./orange/before.png">
+            </button>
+
+            <img src="./orange/logo.png">
+
+            <button id="menuBtn">
+                <img src="./orange/menu.png">
+            </button>
+            
+            <div class="menu" id="menu">
+                <button id="x-btn">
+                    <img src="./orange/x.png">
+                </button>
+                <div class="menu-content">
+                    <a href="main.html" style="color: black; text-decoration: none; font-weight: bold;">홈</a>
+                    <hr id="line"></hr>
+                    <a href="category.html" style="color: black; text-decoration: none; font-weight: bold;">상품 구매</a>
+                    <hr id="line"></hr>
+                    <a href="magazine.html" style="color: black; text-decoration: none; font-weight: bold;">매거진</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div style="display: flex; flex-direction: column; width: 300px; margin: 10px 0px 10px 0px;">
+                <div style="display: flex; justify-content: space-between;">
+                <a style="font-weight: bold; font-size: 20px; display: flex; justify-content: baseline;">ESG 경영</a>
+                <a style="display: flex; justify-content:end; color: gray;">2023/11/08</a>
+                </div>
+                <div style="width: 300px; height: 1px; background-color: #FFBF5C; margin: 10px 0px 30px 0px"></div>
+                
+            </div>
+
+            <div>
+                <img src="orange/m3-1.png" style="width: 300px; display: flex; justify-content: center; margin-bottom: 20px;">
+                <img src="orange/m3-2.png" style="width: 300px; display: flex; justify-content: center; margin-bottom: 20px;">
+                <img src="orange/m3-3.png" style="width: 300px; display: flex; justify-content: center; margin-bottom: 20px;">
+                <img src="orange/m3-4.png" style="width: 300px; display: flex; justify-content: center; margin-bottom: 20px; ">
+                <img src="orange/m3-5.png" style="width: 300px; display: flex; justify-content: center; margin-bottom: 20px; ">
+                
+            </div>
+
+            <button class="gotomaga-btn" onclick="gotoCategory()">
+                다른 매거진 보러가기
+            </button>
+
+        </div>
+        
+
+
+    </div>
+
+    <script src="menu.js"></script>
+    <script>
+        function gotoCategory() {
+            window.location.href = "magazine.html";
+        }
+    </script>
+</body>
+</html>

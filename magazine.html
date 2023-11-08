@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="menu.css">
+    <title>Magezine</title>
+
+    <style>
+        body {
+            background-color: white;
+            width: 390px;
+            margin: 0px auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .top {
+            height: 80px;
+            background-color: white;
+
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 20px 0px 20px;
+            align-items:last baseline;
+            padding-bottom: 20px;
+        }
+
+
+        .content {
+            scroll-behavior: auto;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .magazine-btn {
+           width: 300px;
+           background-color: white;
+           margin-bottom: 30px;
+           border: none;
+           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="top">
+            <button id="gobackBtn">
+                <img src="./orange/before.png">
+            </button>
+
+            <img src="./orange/logo.png">
+
+            <button id="menuBtn">
+                <img src="./orange/menu.png">
+            </button>
+            
+            <div class="menu" id="menu">
+                <button id="x-btn">
+                    <img src="./orange/x.png">
+                </button>
+                <div class="menu-content">
+                    <a href="main.html" style="color: black; text-decoration: none; font-weight: bold;">홈</a>
+                    <hr id="line"></hr>
+                    <a href="category.html" style="color: black; text-decoration: none; font-weight: bold;">상품 구매</a>
+                    <hr id="line"></hr>
+                    <a href="magazine.html" style="color: black; text-decoration: none; font-weight: bold;">매거진</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <h2 style="position: relative; right: 110px;">매거진</h2>
+
+            <button class="magazine-btn" onclick="gotoMagazine1()">
+                <img src="orange/m1-1.png" style="width: 300px; display: flex; justify-content: center; position: relative; right: 6px;">
+                <div style="display: flex; flex-direction: column; align-items: baseline; padding: 7px;">
+                    <a style="font-size: 17px; font-weight: bold; margin-bottom: 3px;">지구의 날</a>
+                    <a>2023/11/08</a>
+                </div>
+            </button>
+
+            <button class="magazine-btn" onclick="gotoMagazine2()">
+                <img src="orange/m2-1.png" style="width: 300px; display: flex; justify-content: center; position: relative; right: 6px;">
+                <div style="display: flex; flex-direction: column; align-items: baseline; padding: 7px;">
+                    <a style="font-size: 17px; font-weight: bold; margin-bottom: 3px;">인생까지 바꾼 사람들</a>
+                    <a>2023/11/08</a>
+                </div>
+            </button>
+
+            <button class="magazine-btn" onclick="gotoMagazine3()">
+                <img src="orange/m3-1.png" style="width: 300px; display: flex; justify-content: center; position: relative; right: 6px;">
+                <div style="display: flex; flex-direction: column; align-items: baseline; padding: 7px;">
+                    <a style="font-size: 17px; font-weight: bold; margin-bottom: 3px;">ESG 경영</a>
+                    <a>2023/11/08</a>
+                </div>
+            </button>
+
+            <button class="magazine-btn" onclick="gotoMagazine4()">
+                <img src="orange/m4-1.png" style="width: 300px; display: flex; justify-content: center; position: relative; right: 6px;">
+                <div style="display: flex; flex-direction: column; align-items: baseline; padding: 7px;">
+                    <a style="font-size: 17px; font-weight: bold; margin-bottom: 3px;">지구를 지키는 법</a>
+                    <a>2023/11/08</a>
+                </div>
+            </button>
+
+        </div>
+        
+
+
+    </div>
+
+    <script src="menu.js"></script>
+    <script>
+        //매거진 버튼 클릭 시 매거진 상세페이지로 이동하는 부분
+        function gotoMagazine1() {
+            window.location.href = "magazine1.html";
+        }
+        function gotoMagazine2() {
+            window.location.href = "magazine2.html";
+        }
+        function gotoMagazine3() {
+            window.location.href = "magazine3.html";
+        }
+        function gotoMagazine4() {
+            window.location.href = "magazine4.html";
+        }
+
+    </script>
+</body>
+</html>

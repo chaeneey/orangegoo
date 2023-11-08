@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="menu.css">
+    <title>Today's Orange</title>
+
+    <style>
+        body {
+            background-color: white;
+            width: 390px;
+            margin: 0px auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .top {
+            height: 80px;
+            background-color: white;
+
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 20px 0px 20px;
+            align-items:last baseline;
+            padding-bottom: 20px;
+        }
+
+        .content {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sub-category {
+            display: flex;
+            width: 390px;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .sub-category-btn {
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .select-bar {
+            width: 80px;
+            height: 3px;
+            background-color: orange;
+            border-radius: 100px;
+            
+            position: relative;
+            bottom: 15px;
+            right: 50px;
+            transition: right 0.5s ease;
+
+        }
+
+        .link-space {
+            width: 390px;
+            background-color: #FFECD0;
+
+            position: absolute;
+            border-radius: 30px 30px 0px 0px;
+            top: 100%;
+        }
+
+        .gotolink {
+            background-color: #FFF4E3;
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+            height: 70px;
+            align-items: center;
+            padding: 20px 10px 20px 10px;
+            margin: 15px 0px 10px 20px;
+
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="top">
+            <button id="gobackBtn">
+                <img src="./orange/before.png">
+            </button>
+
+            <img src="./orange/logo.png">
+
+            <button id="menuBtn">
+                <img src="./orange/menu.png">
+            </button>
+            
+            <div class="menu" id="menu">
+                <button id="x-btn">
+                    <img src="./orange/x.png">
+                </button>
+                <div class="menu-content">
+                    <a href="main.html" style="color: black; text-decoration: none; font-weight: bold;">홈</a>
+                    <hr id="line"></hr>
+                    <a href="category.html" style="color: black; text-decoration: none; font-weight: bold;">상품 구매</a>
+                    <hr id="line"></hr>
+                    <a href="magazine.html" style="color: black; text-decoration: none; font-weight: bold;">매거진</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="sub-category">
+                <button class="sub-category-btn" data-category="category1">기초</button>
+                <button class="sub-category-btn" data-category="category2">색조</button>
+                <button class="sub-category-btn" data-category="category3">도구</button>
+            </div>
+
+            <div class="select-bar"></div>
+
+            <div style="width: 350px; height:700px ; display: flex; flex-direction: column; align-items: center;  position: relative; bottom: 10px;">
+                <div id="contentContainer" style="padding: 10px;">
+                    <!--카테고리에 따른 콘텐츠가 여기에 표시-->
+                    <div id="content1" style="display: none; position: relative; bottom: 10px;">
+                            <img src="orange/makeup1.png" style="width: 390px;">
+    
+                            <div style="position: absolute; top: 48%; margin-left: 20px;">
+                                <p style="font-size: 15px; font-weight: bold;">
+                                    화장품 용기 90% 이상은 <br>
+                                    재활용이 불가하다는 사실, 알고 계셨나요?
+                                </p>
+    
+                                <p style="font-size: 13px;">
+                                    화장품 용기는 보통 플라스틱, 유리, 금속용기로 만들어집니다. <br>
+                                    <br>
+                                    그 중에서도 플라스틱은 58.6%로 <br>
+                                    가장 높은 비중을 차지하고 있는데요. <br>
+                                    플라스틱은 가볍고 저렴할 뿐 아니라 성형이 쉬워 <br>
+                                    화장품 용기에서 플라스틱의 사용량은 압도적입니다. <br>
+                                    <br>
+                                    친환경 재료를 사용해서 화장품을 만드는 것도 중요하지만, <br>
+                                    패키지까지 친환경인 것도 매우 중요합니다. <br>
+                                    <br>
+                                    <span style="font-weight: bold; font-size: 15px;">
+                                        그렇다면, 재활용 패키징이나 <br>
+                                        탄소 배출을 줄이는 소재 패키징을 하는 <br>
+                                        기업의 제품을 사용해보는 건 어떨까요?</span>
+                                </p>
+                            </div>
+
+                             <div class="link-space">
+                            <p style="font-weight: bold; font-size: 15px; padding: 10px 20px 10px 20px;">
+                                <span style="color: orange;">#</span> 나를 위한 성분 <br>
+                                <span style="color: orange;">#</span> 지구를 위한 구성 <br>
+                            </p>
+
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">클렌징</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://thalaspamall.com/product/%ED%8E%84%EB%A3%A8%EC%8B%A0-%ED%8E%98%EC%9D%B4%EC%85%9C-%EC%9B%8C%EC%8B%9C-%ED%8C%8C%EC%9A%B0%EB%8D%94-40g/91/category/54/display/2/">[펄루신] 워시 파우더<br></a>
+                                    <a style="font-size: 13px" href="https://thalaspamall.com/product/%ED%8E%84%EB%A3%A8%EC%8B%A0-%ED%8E%98%EC%9D%B4%EC%85%9C-%EC%9B%8C%EC%8B%9C-%ED%8C%8C%EC%9A%B0%EB%8D%94-40g/91/category/54/display/2/">파우더로 클렌징을? 재활용 가능한 친환경 패키지까지!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.toun28.com/renew/product/43">[톤28] 클렌징 바<br></a>
+                                    <a style="font-size: 13px" href="https://www.toun28.com/renew/product/43">비타민 듬뿍! 들어간, 나와 환경을 위한 클렌징 바</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://ihope.kr/store/?idx=27">[아이홉] 클렌징 세트<br></a>
+                                    <a style="font-size: 13px" href="https://ihope.kr/store/?idx=27">소중하고 감사한 분에게 건강한 아름다움을!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">스킨케어</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://thalaspamall.com/product/%ED%8E%84%EB%A3%A8%EC%8B%A0-%EB%A7%88%EB%A6%B0%ED%81%B4%EB%A0%88%EC%9D%B4-%ED%8C%8C%EC%9A%B0%EB%8D%94%ED%8C%A9-200g-facebody/96/category/54/display/1/">[펄루신] 파우더 팩<br></a>
+                                    <a style="font-size: 13px" href="https://thalaspamall.com/product/%ED%8E%84%EB%A3%A8%EC%8B%A0-%EB%A7%88%EB%A6%B0%ED%81%B4%EB%A0%88%EC%9D%B4-%ED%8C%8C%EC%9A%B0%EB%8D%94%ED%8C%A9-200g-facebody/96/category/54/display/1/">바다의 미네랄을 그대로 담은 친환경 파우더 팩</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.slosophy.com/product/%EB%89%B4%ED%8B%B0%EB%86%80-%ED%86%A0%EB%84%88/12/category/59/display/1/">[슬로소피] 토너<br></a>
+                                    <a style="font-size: 13px" href="https://www.slosophy.com/product/%EB%89%B4%ED%8B%B0%EB%86%80-%ED%86%A0%EB%84%88/12/category/59/display/1/">FSC인증 종이와 소이잉크를 사용한 착한 패키징</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.slosophy.com/product/%EB%82%98%EB%AC%B4-%EC%8B%AC%EB%8A%94-%EC%84%B8%ED%8A%B8/55/category/59/display/1/">[슬로소피] 나무 심는 세트<br></a>
+                                    <a style="font-size: 13px" href="https://www.slosophy.com/product/%EB%82%98%EB%AC%B4-%EC%8B%AC%EB%8A%94-%EC%84%B8%ED%8A%B8/55/category/59/display/1/">구매했을 뿐인데, 나무 한 그루가 자라난다!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://tagamall.com/product/11-%EC%8B%9C%EC%B9%B4%EC%88%98%EB%94%A9%EC%97%90%EC%84%BC%EC%8A%A4-100ml/94/category/31/display/1/">[타가] 에센스<br></a>
+                                    <a style="font-size: 13px" href="https://tagamall.com/product/11-%EC%8B%9C%EC%B9%B4%EC%88%98%EB%94%A9%EC%97%90%EC%84%BC%EC%8A%A4-100ml/94/category/31/display/1/">재생 펄프를 사용한 패키징! 피부와 지구를 위하여</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://tagamall.com/product/%ED%83%80%EA%B0%80%EC%98%A4%EC%9D%BC-150ml-%EC%9C%A0%ED%86%B5%EA%B8%B0%ED%95%9C-20231231/18/category/31/display/1/">[타가] 오일<br></a>
+                                    <a style="font-size: 13px" href="https://tagamall.com/product/%ED%83%80%EA%B0%80%EC%98%A4%EC%9D%BC-150ml-%EC%9C%A0%ED%86%B5%EA%B8%B0%ED%95%9C-20231231/18/category/31/display/1/">친환경 패키징과 99.8% 자연 유래 성분</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            
+
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">선케어</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://tagamall.com/product/%EC%8B%9C%EC%B9%B4-%EC%88%98%EB%94%A9%EC%84%A0%ED%81%AC%EB%A6%BC-50ml/119/category/31/display/1/">[타가] 선크림<br></a>
+                                    <a style="font-size: 13px" href="https://tagamall.com/product/%EC%8B%9C%EC%B9%B4-%EC%88%98%EB%94%A9%EC%84%A0%ED%81%AC%EB%A6%BC-50ml/119/category/31/display/1/">피부 진정과 지구 진정을 모두 잡고 싶다면?</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://tagamall.com/product/%EC%95%84%ED%86%A0-%EC%84%B8%EB%9D%BC-%EB%B9%84%ED%83%80%EC%84%A0%EC%BF%A0%EC%85%98-14g/147/category/31/display/1/">[타가] 선쿠션<br></a>
+                                    <a style="font-size: 13px" href="https://tagamall.com/product/%EC%95%84%ED%86%A0-%EC%84%B8%EB%9D%BC-%EB%B9%84%ED%83%80%EC%84%A0%EC%BF%A0%EC%85%98-14g/147/category/31/display/1/">자연 유래 비타민이 들어간 비타 선쿠션!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%9B%8C%ED%84%B0%ED%92%80-%EC%8B%9C%EC%B9%B4-%EC%84%A0%EB%A1%9C%EC%85%98-%EB%B9%84%EA%B1%B4/31/category/49/display/1/">[프레시안] 선로션<br></a>
+                                    <a style="font-size: 13px" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%9B%8C%ED%84%B0%ED%92%80-%EC%8B%9C%EC%B9%B4-%EC%84%A0%EB%A1%9C%EC%85%98-%EB%B9%84%EA%B1%B4/31/category/49/display/1/">사탕수수로 만든 포장재로 탄소 배출량 감소! </a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div id="content2" style="display: none;">
+                        <img src="orange/makeup2.png" style="width: 390px;  position: relative; bottom: 10px;">
+
+                        <div style="position: absolute; top: 48%; margin-left: 20px;">
+                            <p style="font-size: 15px; font-weight: bold;">
+                                피부로 흡수되는 미세플라스틱
+                            </p>
+
+                            <p style="font-size: 13px;">
+                                우리나라는 2017년 7월부터 <br>
+                                치약이나 스크럽제, 바디워시 등 씻어내는 <br>
+                                화장품에 대한 미세플라스틱 사용을 전면 금지했지만,  <br>
+                                색조 화장품 등 바르는 화장품에는 <br>
+                                여전히 미세플라스틱이 사용되고 있다는 사실! <br>
+                                <br>
+                                특히 미세플라스틱이 함유된 파우더 제형은 <br>
+                                부드러운 발림성과 경제성을 이유로 <br>
+                                색조 화장품에 광범위하게 사용되고 있습니다. <br>
+                                <br>
+                                <span style="font-weight: bold; font-size: 15px;">
+                                    환경과 우리의 몸에 해로운 미세플라스틱은 버리고,
+                                    피부에 직접적으로 닿는 ‘화장품’ 만큼이라도 <br>
+                                    친환경적인 제품으로 바꿔보는 건 어떨까요?
+                                </span>
+                                
+                            </p>
+                        </div>
+
+                         <div class="link-space">
+                            <p style="font-weight: bold; font-size: 15px; padding: 10px 20px 10px 20px;">
+                                <span style="color: orange;">#</span> 내 몸 속에 더는 들어올 수 없다! <br>
+                                <span style="color: orange;">#</span> 미세 플라스틱 사라져라 얍! <br>
+                            </p>
+
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">베이스</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://rimankorea.com/products/14">[리만코리아] 비비 크림<br></a>
+                                    <a style="font-size: 13px" href="https://rimankorea.com/products/14">재생 플라스틱을 사용한 패키징</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%97%90%EA%B7%B8%EB%9D%BC%EC%9D%B4%ED%81%AC-%EC%BF%A0%EC%85%98-%EB%B9%84%EA%B1%B4/21/category/49/display/1/">[프레시안] 쿠션<br></a>
+                                    <a style="font-size: 13px" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%97%90%EA%B7%B8%EB%9D%BC%EC%9D%B4%ED%81%AC-%EC%BF%A0%EC%85%98-%EB%B9%84%EA%B1%B4/21/category/49/display/1/">천연 옥수수를 발효 시켜 만든 퍼프</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%97%90%EA%B7%B8%EB%9D%BC%EC%9D%B4%ED%81%AC-%ED%86%A4%EC%97%85-%EC%BF%A0%EC%85%98%EB%B9%84%EA%B1%B4/27/category/49/display/1/">[프레시안] 톤업 쿠션<br></a>
+                                    <a style="font-size: 13px" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%97%90%EA%B7%B8%EB%9D%BC%EC%9D%B4%ED%81%AC-%ED%86%A4%EC%97%85-%EC%BF%A0%EC%85%98%EB%B9%84%EA%B1%B4/27/category/49/display/1/">리사이클 소재가 50% 적용된 외용기!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%97%90%EA%B7%B8%EB%9D%BC%EC%9D%B4%ED%81%AC-%ED%8C%8C%EC%9A%B4%EB%8D%B0%EC%9D%B4%EC%85%98-%EB%B9%84%EA%B1%B4/33/category/49/display/1/">[프레시안] 파운데이션<br></a>
+                                    <a style="font-size: 13px" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%97%90%EA%B7%B8%EB%9D%BC%EC%9D%B4%ED%81%AC-%ED%8C%8C%EC%9A%B4%EB%8D%B0%EC%9D%B4%EC%85%98-%EB%B9%84%EA%B1%B4/33/category/49/display/1/">빈틈없는 커버, 빈틈없는 친환경 소재의 파운데이션!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">립&아이</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://smartstore.naver.com/neuler/products/6510463084">[늘너] 립스틱<br></a>
+                                    <a style="font-size: 13px" href="https://smartstore.naver.com/neuler/products/6510463084">다회용기 립스틱 들고 다니는 너! 센스쟁이</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%84%BC%EC%8A%88%EC%96%BC-%EB%B9%84%EA%B1%B4-%EB%A6%BD%EB%B0%A4/15/category/43/display/1/">[프레시안] 립밤<br></a>
+                                    <a style="font-size: 13px" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%84%BC%EC%8A%88%EC%96%BC-%EB%B9%84%EA%B1%B4-%EB%A6%BD%EB%B0%A4/15/category/43/display/1/">촉촉한 친환경 버터 립밤!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%84%BC%EC%8A%88%EC%96%BC-%EB%B9%84%EA%B1%B4-%EB%A6%BD%EC%8A%A4%ED%8B%B1-%EB%B8%94%EB%9F%AC/67/category/43/display/1/">[프레시안] 립스틱<br></a>
+                                    <a style="font-size: 13px" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%84%BC%EC%8A%88%EC%96%BC-%EB%B9%84%EA%B1%B4-%EB%A6%BD%EC%8A%A4%ED%8B%B1-%EB%B8%94%EB%9F%AC/67/category/43/display/1/">케이링 성분으로 부드럽게 밀착되는 친환경 립스틱</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EB%B9%84%EA%B1%B4-%EC%84%B8%EB%9F%BC-%EB%A6%BD%ED%8B%B4%ED%8A%B8/11/category/57/display/1/">[프레시안] 립틴트<br></a>
+                                    <a style="font-size: 13px" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EB%B9%84%EA%B1%B4-%EC%84%B8%EB%9F%BC-%EB%A6%BD%ED%8B%B4%ED%8A%B8/11/category/57/display/1/">촉촉하고 맑은 친환경 비건 세럼 틴트</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://vegansuper.co.kr/product/detail.html?product_no=96&cate_no=59&display_group=1">[비건 슈퍼] 아이섀도우<br></a>
+                                    <a style="font-size: 13px" href="https://vegansuper.co.kr/product/detail.html?product_no=96&cate_no=59&display_group=1">다 쓴 용기는 반납 가능한 나만의 환경 꿀템!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div id="content3" style="display: none;">
+                        <img src="orange/makeup3.png" style="width: 390px;  position: relative; bottom: 10px;">
+
+                        <div style="position: absolute; top: 48%; margin-left: 20px;">
+                            <p style="font-size: 15px; font-weight: bold;">
+                                본드로 인해 재활용이 불가능한 도구
+                            </p>
+
+                            <p style="font-size: 13px;">
+                                화장품 도구는 보통 본드로 인해 <br>
+                                재활용이 어렵습니다. <br>
+                                <br>
+                                그렇다면, 본드를 사용하지 않는 <br>
+                                도구를 사용한다면, 분리수거가 가능하겠죠? <br>
+                                <br>
+                                분리가 가능한 화장도구는 
+                                더 깨끗하게 닦아서 쓸 수 있다는 장점도 있답니다! <br>
+                                <br>
+                                <span style="font-weight: bold; font-size: 15px;">
+                                    환경도 지키고, 쳥결도 챙겨볼까요? 
+                                </span>
+   
+                            </p>
+                        </div>
+                        <div class="link-space">
+                            <p style="font-weight: bold; font-size: 15px; padding: 10px 20px 10px 20px;">
+                                <span style="color: orange;">#</span> 필요하지도 않은 너 때문에 <br>
+                                <span style="color: orange;">#</span> 환경 파괴범이 될 수 없어! <br>
+                            </p>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://furxbeauty.imweb.me/59/?idx=22">[FURX] 블러셔, 쉐딩 브러쉬<br></a>
+                                    <a style="font-size: 13px" href="https://furxbeauty.imweb.me/59/?idx=22">알루미늄과 부품을 재사용할 수 있는 비건 브러쉬!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://furxbeauty.imweb.me/59/?idx=24">[FURX] 파우더 브러쉬<br></a>
+                                    <a style="font-size: 13px" href="https://furxbeauty.imweb.me/59/?idx=24">글루프리로 재활용이 용이한 환경 친화적 브러쉬!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%BF%A0%EC%85%98%ED%8D%BC%ED%94%84-2p/56/category/49/display/1/">[프레시안] 천연 옥수수 퍼프<br></a>
+                                    <a style="font-size: 13px" href="https://freshian.com/product/%ED%94%84%EB%A0%88%EC%8B%9C%EC%95%88-%EC%BF%A0%EC%85%98%ED%8D%BC%ED%94%84-2p/56/category/49/display/1/">매끈한 피부를 만들어주는 천연 옥수수 프리미엄 퍼프!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+    </div>
+
+    <script src="menu.js"></script>
+
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        //카테고리 버튼 선택
+        const categoryButtons = document.querySelectorAll('.sub-category-btn');
+        //콘텐츠 표시할 컨테이너 가져오기
+        const contentContainer = document.getElementById('contentContainer');
+        const contentOne = document.getElementById('content1');
+        const contentTwo = document.getElementById('content2');
+        const contentThr = document.getElementById('content3');
+        const selectBar = document.querySelector('.select-bar');
+
+        //각 버튼에 대한 클릭 이벤트 처리하는 함수
+        function handleButtonClick(event) {
+            //클릭한 버튼의 데이터 카테고리 값 가져오기
+            const selectedCategory = event.target.dataset.category;
+
+            //선택된 카테고리에 따라 콘텐츠 업데이트
+            if (contentContainer) {
+                if (selectedCategory === 'category1') {
+                    contentOne.style.display = 'block';
+                    contentTwo.style.display = 'none';
+                    contentThr.style.display = 'none';
+                    selectBar.style.right = '128px';
+                } else if (selectedCategory === 'category2') {
+                    contentOne.style.display = 'none';
+                    contentTwo.style.display = 'block';
+                    contentThr.style.display = 'none';
+                    selectBar.style.right = '0px';
+                } else if (selectedCategory === 'category3') {
+                    contentOne.style.display = 'none';
+                    contentTwo.style.display = 'none';
+                    contentThr.style.display = 'block';
+                    selectBar.style.right = '-128px';
+                }
+            }
+        
+        }
+
+        //각 버튼에 대한 클릭 이벤트 등록
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', handleButtonClick);
+        });
+
+        //페이지 로딩 시 초기 콘텐츠 설정하기 위해 첫 번째 버튼을 클릭한 것 같은 효과
+        handleButtonClick({target: categoryButtons[0]});
+    });
+    </script>
+</body>
+</html>

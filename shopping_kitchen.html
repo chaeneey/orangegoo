@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="menu.css">
+    <title>Today's Orange</title>
+
+    <style>
+        body {
+            background-color: white;
+            width: 390px;
+            margin: 0px auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .top {
+            height: 80px;
+            background-color: white;
+
+            display: flex;
+            justify-content: space-between;
+            margin: 0px 20px 0px 20px;
+            align-items:last baseline;
+            padding-bottom: 20px;
+        }
+
+        .content {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sub-category {
+            display: flex;
+            width: 390px;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+
+        .sub-category-btn {
+            background-color: transparent;
+            border: none;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .select-bar {
+            width: 80px;
+            height: 3px;
+            background-color: orange;
+            border-radius: 100px;
+            
+            position: relative;
+            bottom: 15px;
+            right: 50px;
+            transition: right 0.5s ease;
+
+        }
+
+        .link-space {
+            width: 390px;
+            background-color: #FFECD0;
+
+            position: absolute;
+            border-radius: 30px 30px 0px 0px;
+            top: 100%;
+        }
+
+        .gotolink {
+            background-color: #FFF4E3;
+            display: flex;
+            justify-content: space-between;
+            width: 350px;
+            height: 70px;
+            align-items: center;
+            padding: 20px 10px 20px 10px;
+            margin: 15px 0px 10px 20px;
+
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="top">
+            <button id="gobackBtn">
+                <img src="./orange/before.png">
+            </button>
+
+            <img src="./orange/logo.png">
+
+            <button id="menuBtn">
+                <img src="./orange/menu.png">
+            </button>
+            
+            <div class="menu" id="menu">
+                <button id="x-btn">
+                    <img src="./orange/x.png">
+                </button>
+                <div class="menu-content">
+                    <a href="main.html" style="color: black; text-decoration: none; font-weight: bold;">홈</a>
+                    <hr id="line"></hr>
+                    <a href="category.html" style="color: black; text-decoration: none; font-weight: bold;">상품 구매</a>
+                    <hr id="line"></hr>
+                    <a href="magazine.html" style="color: black; text-decoration: none; font-weight: bold;">매거진</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="sub-category">
+                <button class="sub-category-btn" data-category="category1">주방세제</button>
+                <button class="sub-category-btn" data-category="category2">수세미</button>
+                <button class="sub-category-btn" data-category="category3">도구</button>
+            </div>
+
+            <div class="select-bar"></div>
+
+            <div style="width: 350px; height:700px ; display: flex; flex-direction: column; align-items: center;  position: relative; bottom: 20px;">
+                <div id="contentContainer" style="padding: 10px;">
+                    <!--카테고리에 따른 콘텐츠가 여기에 표시-->
+                    <div id="content1" style="display: none;">
+                        <img src="orange/kitchen1.png" style="width: 390px;">
+
+                        <div style="position: absolute; top: 48%; margin-left: 20px;">
+                            <p style="font-size: 15px; font-weight: bold;">
+                                우리가 사용하는 액체 주방세제의 <br>
+                                표준사용량을 아시나요?      
+                            </p>
+
+                            <p style="font-size: 13px;">
+                                물 1L에 세제 1.5~2ml 정도를 희석해 쓰는 것이 <br>
+                                올바른 사용법이라고 합니다. <br>
+                                <br>
+                                세제를 수세미에 직접 여러 번 짜서 쓰는데 <br>
+                                익숙했던 분들에겐 다소 충격적인 소식이죠! <br>
+                                주방세제 속 화학 성분은 분해되지 않은 채<br>
+                                하수로 유입되기 때문에 많은 양의 세제를 쓰면, <br>
+                                유입된 세제가 다시 우리에게로 돌아옵니다.<br>
+                                <br>
+                                그렇다면 어떻게 세제를 줄일 수 있을까요?<br>
+                                설거지 비누는 100g으로 약 65회를 사용할 수 있습니다.<br>
+                                회당 3g 정도로 설거지가 가능한데다가, <br>
+                                계면활성제가 포함되어있지 않아, 더욱 좋답니다!<br>
+                                <br>
+                                <span style="font-weight: bold; font-size: 15px;">
+                                다시 세제가 우리에게 돌아오지 않도록,<br>
+                                설거지 비누를 사용해보는건 어떨까요?<br>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="link-space">
+                            <p style="font-weight: bold; font-size: 15px; padding: 10px 20px 10px 20px;">
+                                <span style="color: orange;">#</span> 풍성한 거품! <br>
+                                <span style="color: orange;">#</span> 1종 세제 <br>
+                                <span style="color: orange;">#</span> 기름때 가득한 그릇도 완벽하게 <br>
+                                <span style="color: orange;">#</span> 먹거리까지 안심하고 세척하세요! <br>
+                            </p>
+    
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">설거지바</div>
+                            </div>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.donggubat.co.kr/goods/goods_view.php?goodsNo=1000000020">[동구밭] 올바른 설거지 워싱바 500g<br></a>
+                                    <a style="font-size: 13px" href="https://www.donggubat.co.kr/goods/goods_view.php?goodsNo=1000000020">잔존 세제 걱정 없이 안심할 수 있는 설거지비누</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.toun28.com/renew/product/101">[톤28] 설거지바 S26 보습세정 (유기농 오곡/쌀)<br></a>
+                                    <a style="font-size: 13px" href="https://www.toun28.com/renew/product/101">맨손 설거지 후에도 촉촉하게 유지되는 보습력</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.toun28.com/renew/product/104">[톤28] 설거지바 S29 안심세정 (자몽/생강)<br></a>
+                                    <a style="font-size: 13px" href="https://www.toun28.com/renew/product/104">싱그러운 천연원료로 과일, 야채까지 안심하고 세정</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.toun28.com/renew/product/213">[톤28] 설거지바 S30 만능세정 (녹차/병풀)<br></a>
+                                    <a style="font-size: 13px" href="https://www.toun28.com/renew/product/213">병풀추출물로 피부를 안전하게, 설거지는 깔끔하게!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.toun28.com/renew/product/103">[톤28] 설거지바 S28 자연세정 (유기농 솝베리)<br></a>
+                                    <a style="font-size: 13px" href="https://www.toun28.com/renew/product/103">솝베리의 사포닌으로 풍부한 거품이 탁월한 설거지바</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://m.mamaforest.co.kr/product/detail.html?product_no=59&cate_no=46&display_group=1">[마마포레스트] 내추럴 디쉬바<br></a>
+                                    <a style="font-size: 13px" href="https://m.mamaforest.co.kr/product/detail.html?product_no=59&cate_no=46&display_group=1">기름기 제거까지 완벽하게! 착한 설거지바</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.seonstyle.com/product/untitled-57">[스페이스선] 촌스러운 주방비누 오렌지 스위트<br></a>
+                                    <a style="font-size: 13px" href="https://www.seonstyle.com/product/untitled-57">오렌지 오일이 함유되어 향기로움이 가득한 설거지바</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://shinemakers.co.kr/product/%EB%A1%9C%EA%B3%A0%EB%A6%AC%EC%8A%A4-%EC%95%88%EC%8B%AC%EC%84%B8%EC%B2%99-%EC%84%A4%EA%B1%B0%EC%A7%80%EB%B0%94/195/category/1/display/21/](https://shinemakers.co.kr/product/%EB%A1%9C%EA%B3%A0%EB%A6%AC%EC%8A%A4-%EC%95%88%EC%8B%AC%EC%84%B8%EC%B2%99-%EC%84%A4%EA%B1%B0%EC%A7%80%EB%B0%94/195/category/1/display/21/)">[샤인메이커스] 로고리스 안심세척 설거지바<br></a>
+                                    <a style="font-size: 13px" href="https://shinemakers.co.kr/product/%EB%A1%9C%EA%B3%A0%EB%A6%AC%EC%8A%A4-%EC%95%88%EC%8B%AC%EC%84%B8%EC%B2%99-%EC%84%A4%EA%B1%B0%EC%A7%80%EB%B0%94/195/category/1/display/21/](https://shinemakers.co.kr/product/%EB%A1%9C%EA%B3%A0%EB%A6%AC%EC%8A%A4-%EC%95%88%EC%8B%AC%EC%84%B8%EC%B2%99-%EC%84%A4%EA%B1%B0%EC%A7%80%EB%B0%94/195/category/1/display/21/)">무성형으로 가격을 낮춰 부담없는 설거지바</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://pulire.co.kr/shop/?idx=41">[쁘라레] 워싱바<br></a>
+                                    <a style="font-size: 13px" href="https://pulire.co.kr/shop/?idx=41">유아용품 브랜드에서 만든 가족을 위한 설거지바</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://onlyeco.co.kr/product/%EA%B8%B0%EB%B6%84%EC%A2%8B%EC%9D%80-%EC%84%A4%EA%B1%B0%EC%A7%80-%EC%84%B8%ED%8A%B8/630/category/51/display/1/">[자연상점] 기분좋은 설거지 세트<br></a>
+                                    <a style="font-size: 13px" href="https://onlyeco.co.kr/product/%EA%B8%B0%EB%B6%84%EC%A2%8B%EC%9D%80-%EC%84%A4%EA%B1%B0%EC%A7%80-%EC%84%B8%ED%8A%B8/630/category/51/display/1/">설거지 용품을 모아서 만든 설거지 세트</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.donggubat.co.kr/goods/goods_view.php?goodsNo=1000000085">[동구밭] 친환경 설거지 비누 스타터 세트<br></a>
+                                    <a style="font-size: 13px" href="https://www.donggubat.co.kr/goods/goods_view.php?goodsNo=1000000085">설거지에 필수적으로 필요한 것만을 모은 스타터 세트</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+    
+    
+                        </div>
+                    </div>
+
+                    
+
+
+                    <div id="content2" style="display: none;">
+                        <img src="orange/kitchen2.png" style="width: 390px;">
+
+                        <div style="position: absolute; top: 48%; margin-left: 20px;">
+                            <p style="font-size: 15px; font-weight: bold;">
+                                아크릴 수세미에서, <br> 미세 플라스틱이 
+                                떨어져 나온다는 사실을 아시나요?
+                            </p>
+
+                            <p style="font-size: 13px;">
+                                아크릴 수세미에서 떨어진 미세 플라스틱은 <br>
+                                설거지 후에도 식기에 그대로 남아<br>
+                                우리 입으로 들어가게 됩니다.<br>
+                                <br>
+                                하천으로 흘러 들어간 미세 플라스틱은<br>
+                                플랑크톤이 먹이로 오인해 먹게 되고,<br>
+                                그 플랑크톤을 먹은 물고기가 우리 밥상에 올라옵니다.<br>
+                                결국 다시 우리에게 다시 돌아오는거죠.<br>
+                                <br>
+                                <span style="font-weight: bold; font-size: 15px;"></span>
+                                이런 악순환을 막기 위해,<br>
+                                자연에서 나온 재료들로 만든 수세미를<br>
+                                사용해보는 건 어떨까요?<br>
+                                </span>
+                                
+                            </p>
+                        </div>
+
+                        <div class="link-space">
+                            <p style="font-weight: bold; font-size: 15px; padding: 10px 20px 10px 20px;">
+                                <span style="color: orange;">#</span> 풍성한 거품! <br>
+                                <span style="color: orange;">#</span> ”진짜” 순한 제품들! <br>
+                                <span style="color: orange;">#</span> 기름때 가득한 그릇도 완벽하게 <br>
+                                <span style="color: orange;">#</span> 먹거리까지 안심하고 세척하세요! <br>
+                            </p>
+
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">수세미</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://www.donggubat.co.kr/goods/goods_view.php?goodsNo=1000000042">[동구밭] 수세미 기본형<br></a>
+                                    <a style="font-size: 13px" href="https://www.donggubat.co.kr/goods/goods_view.php?goodsNo=1000000042">수세미를 삶고 세척 후 압축해 재봉한 100% 수세미</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://smartstore.naver.com/j-queenbee/products/5513694852">[퀸비스토어] 코코넛야자 병세척솔<br></a>
+                                    <a style="font-size: 13px" href="https://smartstore.naver.com/j-queenbee/products/5513694852">튼튼하고 질긴 코코넛을 이용한 천연 청소솔!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://sambe.co.kr/product/%EC%B2%9C%EC%97%B0-%EC%82%BC%EB%B2%A0-%EC%88%98%EC%84%B8%EB%AF%B8-3%EA%B0%9C-1%EC%84%B8%ED%8A%B8/112/category/1/display/2/">[예고은] 삼베 수세미<br></a>
+                                    <a style="font-size: 13px" href="https://sambe.co.kr/product/%EC%B2%9C%EC%97%B0-%EC%82%BC%EB%B2%A0-%EC%88%98%EC%84%B8%EB%AF%B8-3%EA%B0%9C-1%EC%84%B8%ED%8A%B8/112/category/1/display/2/">삼베를 이용해 만든 천연 수세미로 세제 없이 설거지를!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://m.mamaforest.co.kr/product/detail.html?product_no=140&cate_no=42&display_group=1">[마마포레스트] 수세미<br></a>
+                                    <a style="font-size: 13px" href="https://m.mamaforest.co.kr/product/detail.html?product_no=140&cate_no=42&display_group=1">다양한 옵션이 존재하는 100% 생분해 메쉬 수세미</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://m.smartstore.naver.com/horanmalko/products/5110803570">[어슬링] 수세미<br></a>
+                                    <a style="font-size: 13px" href="https://m.smartstore.naver.com/horanmalko/products/5110803570">수세미 나무의 열매인 수세미로 만든 '진짜' 수세미</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://urbanpapa.com/product/%EC%96%B4%EC%8D%B8%EB%A3%A8%ED%8C%8C-%EC%B2%9C%EC%97%B0%EC%88%98%EC%84%B8%EB%AF%B8%EC%86%8C%ED%98%95-1%EA%B0%9C3%EA%B0%9C5%EA%B0%9C/13/category/66/display/1/">[어반파파] 어썸루파 천연수세미<br></a>
+                                    <a style="font-size: 13px" href="https://urbanpapa.com/product/%EC%96%B4%EC%8D%B8%EB%A3%A8%ED%8C%8C-%EC%B2%9C%EC%97%B0%EC%88%98%EC%84%B8%EB%AF%B8%EC%86%8C%ED%98%95-1%EA%B0%9C3%EA%B0%9C5%EA%B0%9C/13/category/66/display/1/">수세미를 건조하여 만든 천연수세미, 사이즈 옵션까지!</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://urbanpapa.com/product/%EC%96%B4%EC%8D%B8%EB%A3%A8%ED%8C%8C-%EB%B3%B4%ED%8B%80%EC%88%98%EC%84%B8%EB%AF%B8/43/category/66/display/1/](https://urbanpapa.com/product/%EC%96%B4%EC%8D%B8%EB%A3%A8%ED%8C%8C-%EB%B3%B4%ED%8B%80%EC%88%98%EC%84%B8%EB%AF%B8/43/category/66/display/1/)">[어반파파] 어썸루파 보틀수세미<br></a>
+                                    <a style="font-size: 13px" href="https://urbanpapa.com/product/%EC%96%B4%EC%8D%B8%EB%A3%A8%ED%8C%8C-%EB%B3%B4%ED%8B%80%EC%88%98%EC%84%B8%EB%AF%B8/43/category/66/display/1/](https://urbanpapa.com/product/%EC%96%B4%EC%8D%B8%EB%A3%A8%ED%8C%8C-%EB%B3%B4%ED%8B%80%EC%88%98%EC%84%B8%EB%AF%B8/43/category/66/display/1/)">컵, 텀블러, 젖병까지 완벽하게 세척 가능 천연수세미</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div id="content3" style="display: none;">
+                        <img src="orange/kitchen3.png" style="width: 390px;">
+
+                        <div style="position: absolute; top: 48%; margin-left: 20px;">
+                            <p style="font-size: 15px; font-weight: bold;">
+                                일회용 티백 조차도 <br>
+                                플라스틱 섬유가 포함되어 있습니다.
+                            </p>
+
+                            <p style="font-size: 13px;">
+                                캐나다 맥길대학교 화학공학과 교수연구팀은<br>
+                                티백 하나에서 미세 플라스틱 116억 개와<br>
+                                나노 플라스틱 31억 개가 검출됐다고 밝혔습니다. <br>
+                                특히 피라미드 티백이라고 불리는 삼각형 모양의 티백은 <br>
+                                100% 플라스틱 섬유로 만들어진다는 사실!<br>
+                                <br>
+                                이런 플라스틱 섬유로 만들어진 티백은 뜨거운 물 속에서 <br>
+                                수십억 개의 미세 플라스틱을 뿜어내고, <br>
+                                우리는 결국 미세 플라스틱을 함께 우려내어 마시게 됩니다.<br>
+                                <br>
+                                일회용 티백 외에도 주방에서 사용하는 <br>
+                                수많은 제품들이 하나씩 모여 <br>
+                                지구에게 결코 작지 않을 악영향을 미치고 있습니다. <br>
+                                <br>
+                                <span style="font-weight: bold; font-size: 15px;">작은 것부터, 천천히,<br>
+                                친환경 도구로 바꿔나가보는 건 어떨까요?
+                                </span>
+
+                            </p>
+
+                        </div>
+
+                        <div class="link-space">
+                            <p style="font-weight: bold; font-size: 15px; padding: 10px 20px 10px 20px;">
+                                <span style="color: orange;">#</span> 작은 것 하나까지도 <br>
+                                <span style="color: orange;">#</span> 나를 위해 <br>
+                                <span style="color: orange;">#</span> 지구를 위해 <br>
+                        
+                            </p>
+
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">티백</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://m.smartstore.naver.com/horanmalko/products/5362322503">[어슬링] 다회용 티백<br></a>
+                                    <a style="font-size: 13px" href="https://m.smartstore.naver.com/horanmalko/products/5362322503">무형광, 무표백 20수 면으로 제작한 다회용 티백</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://sambe.co.kr/product/%EC%98%88%EA%B3%A0%EC%9D%80-%ED%93%A8%EC%96%B4-%EC%82%BC%EB%B2%A0-%EC%B0%A8%EC%A3%BC%EB%A8%B8%EB%8B%88-%EC%9E%91%EC%9D%80-%ED%8B%B0%EB%B0%B1/436/">[예고은] 티백<br></a>
+                                    <a style="font-size: 13px" href="https://sambe.co.kr/product/%EC%98%88%EA%B3%A0%EC%9D%80-%ED%93%A8%EC%96%B4-%EC%82%BC%EB%B2%A0-%EC%B0%A8%EC%A3%BC%EB%A8%B8%EB%8B%88-%EC%9E%91%EC%9D%80-%ED%8B%B0%EB%B0%B1/436/">우리에게, 지구에게 이로운 삼베로 제작한 티백</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">주방장갑</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://smartstore.naver.com/artandhug/products/8626650300">[아트앤허그] 주방장갑<br></a>
+                                    <a style="font-size: 13px" href="https://smartstore.naver.com/artandhug/products/8626650300">폐페트병 원단을 활용해 만든 리사이클 주방장갑</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+                            
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">비닐봉투</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://sugarlab.co.kr/product/detail.html?product_no=98&cate_no=105&display_group=2">[슈가랩] 프리미엄 에코백 3종<br></a>
+                                    <a style="font-size: 13px" href="https://sugarlab.co.kr/product/detail.html?product_no=98&cate_no=105&display_group=2">사탕수수원료 100% 함유로 환경호르몬 걱정 제로</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+
+                            <div style="display: flex; flex-direction: row; padding-left: 20px; align-items: center; margin-top: 20px;">
+                                <div style="width: 3px; height: 20px; background-color: orange;"></div>
+                                <div style="font-weight: bold; padding-left: 10px;">키친타올</div>
+                            </div>
+
+                            <button class="gotolink">
+                                <div style="display: flex; flex-direction: column; align-items: baseline;">
+                                    <a style="font-weight: bold;" href="https://vastlykorea.com/product/%EB%B0%94%EC%8A%A4%ED%8B%80%EB%A6%AC-%EB%A8%BC%EC%A7%80%EC%97%86%EB%8A%94-%EA%B8%80%EB%A3%A8%ED%94%84%EB%A6%AC-%EB%B0%80%EC%A7%9A-2%EA%B2%B9-%EC%97%A0%EB%B3%B4%EC%8B%B1-%ED%82%A4%EC%B9%9C%ED%83%80%EC%9B%94-2%EB%A1%A4/125/category/88/display/1/](https://vastlykorea.com/product/%EB%B0%94%EC%8A%A4%ED%8B%80%EB%A6%AC-%EB%A8%BC%EC%A7%80%EC%97%86%EB%8A%94-%EA%B8%80%EB%A3%A8%ED%94%84%EB%A6%AC-%EB%B0%80%EC%A7%9A-2%EA%B2%B9-%EC%97%A0%EB%B3%B4%EC%8B%B1-%ED%82%A4%EC%B9%9C%ED%83%80%EC%9B%94-2%EB%A1%A4/125/category/88/display/1/)">[바스틀리] 키친타올<br></a>
+                                    <a style="font-size: 13px" href="https://vastlykorea.com/product/%EB%B0%94%EC%8A%A4%ED%8B%80%EB%A6%AC-%EB%A8%BC%EC%A7%80%EC%97%86%EB%8A%94-%EA%B8%80%EB%A3%A8%ED%94%84%EB%A6%AC-%EB%B0%80%EC%A7%9A-2%EA%B2%B9-%EC%97%A0%EB%B3%B4%EC%8B%B1-%ED%82%A4%EC%B9%9C%ED%83%80%EC%9B%94-2%EB%A1%A4/125/category/88/display/1/](https://vastlykorea.com/product/%EB%B0%94%EC%8A%A4%ED%8B%80%EB%A6%AC-%EB%A8%BC%EC%A7%80%EC%97%86%EB%8A%94-%EA%B8%80%EB%A3%A8%ED%94%84%EB%A6%AC-%EB%B0%80%EC%A7%9A-2%EA%B2%B9-%EC%97%A0%EB%B3%B4%EC%8B%B1-%ED%82%A4%EC%B9%9C%ED%83%80%EC%9B%94-2%EB%A1%A4/125/category/88/display/1/)">천연 밀짚 펄프 100%, 접착제 사용 x 글루프리</a> 
+                                </div>
+                                <img src="orange/gotolink.png">
+                            </button>
+                            
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+    </div>
+
+    <script src="menu.js"></script>
+
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        //카테고리 버튼 선택
+        const categoryButtons = document.querySelectorAll('.sub-category-btn');
+        //콘텐츠 표시할 컨테이너 가져오기
+        const contentContainer = document.getElementById('contentContainer');
+        const contentOne = document.getElementById('content1');
+        const contentTwo = document.getElementById('content2');
+        const contentThr = document.getElementById('content3');
+        const selectBar = document.querySelector('.select-bar');
+
+        //각 버튼에 대한 클릭 이벤트 처리하는 함수
+        function handleButtonClick(event) {
+            //클릭한 버튼의 데이터 카테고리 값 가져오기
+            const selectedCategory = event.target.dataset.category;
+
+            //선택된 카테고리에 따라 콘텐츠 업데이트
+            if (contentContainer) {
+                if (selectedCategory === 'category1') {
+                    contentOne.style.display = 'block';
+                    contentTwo.style.display = 'none';
+                    contentThr.style.display = 'none';
+                    selectBar.style.right = '120px';
+                } else if (selectedCategory === 'category2') {
+                    contentOne.style.display = 'none';
+                    contentTwo.style.display = 'block';
+                    contentThr.style.display = 'none';
+                    selectBar.style.right = '-15px';
+                } else if (selectedCategory === 'category3') {
+                    contentOne.style.display = 'none';
+                    contentTwo.style.display = 'none';
+                    contentThr.style.display = 'block';
+                    selectBar.style.right = '-135px';
+                }
+            }
+        
+        }
+
+        //각 버튼에 대한 클릭 이벤트 등록
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', handleButtonClick);
+        });
+
+        //페이지 로딩 시 초기 콘텐츠 설정하기 위해 첫 번째 버튼을 클릭한 것 같은 효과
+        handleButtonClick({target: categoryButtons[0]});
+    });
+    </script>
+</body>
+</html>
