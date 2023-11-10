@@ -7,6 +7,9 @@
     <title>Today's Orange</title>
     <script defer src="https://cdn.swygbro.com/public/widget/swyg-widget.js"></script>
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+  </style>
 
 <style>
     
@@ -14,6 +17,7 @@
             background-color: white;
             width: 390px;
             margin: 0px auto;
+            font-family: 'Noto Sans KR', sans-serif;
 
             display: flex;
             flex-direction: column;
@@ -83,7 +87,7 @@
                     <img src="./orange/x.png">
                 </button>
                 <div class="menu-content">
-                    <a href="main.html" style="color: black; text-decoration: none; font-weight: bold;">홈</a>
+                    <a href="index.html" style="color: black; text-decoration: none; font-weight: bold;">홈</a>
                     <hr id="line"></hr>
                     <a href="category.html" style="color: black; text-decoration: none; font-weight: bold;">상품 구매</a>
                     <hr id="line"></hr>
@@ -93,23 +97,23 @@
         </div>
         <div class="category">
             <button id="category-btn" onclick="gotoPet()">
-                <img class="button-image" src="/orange/image359.png" alt="반려동물">
+                <img class="button-image" src="./orange/image359.png" alt="반려동물">
                 <h2 style="position:absolute; color: white;">반려동물</h2>
             </button>
             <button id="category-btn" onclick="gotoKitchen()">
-                <img class="button-image" src="/orange/image372.png" alt="주방용품">
+                <img class="button-image" src="./orange/image372.png" alt="주방용품">
                 <h2 style="position:absolute; color: white;">주방용품</h2>
             </button>
             <button id="category-btn" onclick="gotoStationery()">
-                <img class="button-image" src="/orange/image365.png" alt="문구류">
+                <img class="button-image" src="./orange/image365.png" alt="문구류">
                 <h2 style="position:absolute; color: white;">문구류</h2>
             </button>
             <button id="category-btn" onclick="gotoBathroom()">
-                <img class="button-image" src="/orange/image373.png" alt="욕실용품">
+                <img class="button-image" src="./orange/image373.png" alt="욕실용품">
                 <h2 style="position:absolute; color: white;">욕실용품</h2>
             </button>
             <button id="category-btn"  onclick="gotoMakeup()">
-                <img class="button-image" src="/orange/image358.png" alt="화장품">
+                <img class="button-image" src="./orange/image358.png" alt="화장품">
                 <h2 style="position:absolute; color: white;">화장품</h2>
             </button>
         </div>
